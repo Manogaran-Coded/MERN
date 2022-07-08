@@ -1,0 +1,14 @@
+cd C:\Users\BH12818\Documents\TCS\MERN-BOOTCAMP\Mongo DB\Project\MERN
+git config --global user.name "Manogaran"
+git config --global user.email "manogaran.sa@gmail.com"
+git init -b main
+git add .
+git reset
+git status
+git add .gitignore
+git commit -m "COMMIT"
+git push
+git remote add https://github.com/Manogaran-Coded/MERN
+git remote add Manogaran https://github.com/Manogaran-Coded/MERN
+git push
+git push --set-upstream Manogaran main
