@@ -1,0 +1,7 @@
+db.createCollection("Product_Collection");
+db.Product_Collection.createIndex({PogId:1})
+db.Product_Collection.insertMany([
+{"PogId" : 1, "Supc" : "fe3e", "Brand" : "B1", "Description" : "Description 1", "Size" : 13, "Category" : "A1", "Sub-Category" : "AA1", "Price" : 5000, "Quantity" : 4, "Country" : "USA", "Seller-Code": "THD", "Creation-time" : new Date("06-13-2022"), "Stock" : "Full"},
+{"PogId" : 2, "Supc" : "se4e", "Brand" : "A1", "Description" : "Description 2", "Size" : 23, "Category" : "A1", "Sub-Category" : "AA1", "Price" : 5000, "Quantity" : 4, "Country" : "USA", "Seller-Code": "THD", "Creation-time" : new Date("06-13-2022"), "Stock" : "NA"},
+{"PogId" : 3, "Supc" : "re5e", "Brand" : "C1", "Description" : "Description 3", "Size" : 32, "Category" : "A1", "Sub-Category" : "AA1", "Price" : 5000, "Quantity" : 4, "Country" : "USA", "Seller-Code": "THD", "Creation-time" : new Date("06-13-2022"), "Stock" : "Full"}
+]);

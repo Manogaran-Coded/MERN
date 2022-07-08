@@ -1,0 +1,63 @@
+{
+    firstName: "Prakash",
+    lastName: "gopal",
+    dob: new Date("27/05/2022"),
+    skills: [
+        "html",
+        "css"
+    ],
+    address: {
+        street: "parket vinings",
+        city: "Smyrna"
+    },
+    emergencyContacts: [
+        {
+            name: "Brad",
+            relationship: "friend"
+        }
+    ]
+}
+
+db.createUser({
+    user:"Mano",
+    pwd: "password",
+    roles:["readWrite","dbAdmin"]
+})
+
+db.createCollection('user_records');
+show collections
+ 
+db.user_records.find();
+db.user
+db.HR.insert({
+    locations:
+        id: "2",
+        streetAddress: "4th Main Road",
+        postalCode:"30096",
+        city: "smyrna",
+        stateProvince:"GA",
+        countryId: "0096",
+        countryName: "USA",
+    deparments:{
+        id: "001",
+        departmentName: "cash",
+        managerId: "999"
+        
+    }
+    });
+
+    db.books.insertOne({
+        _id:1,
+        "title": "MongoDb for JS Developers",
+        "isbn": "0-333-3033-33"
+    });
+
+
+    db.books.insertMany([
+        {title: "Master in Cloud", isbn: "0-4394-44840-4"},
+        {title: "Master in SRE",isbn: "0-4394-44840-4"},
+        {title: "Master in MongoDB", isbn: "0-4394-44840-4"}
+    ]);
+
+
+    

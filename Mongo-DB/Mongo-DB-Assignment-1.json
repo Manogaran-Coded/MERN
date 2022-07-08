@@ -1,0 +1,67 @@
+{
+    firstName: "Raj",
+    lastName: "Kumar",
+    DOB: new Date("04-10-2001"),
+    skills: ["Java", "J2EE", "Oracle"],
+    Address:
+    {
+        street: "7th Main Road",
+        pincode: "600096",
+        city: "New Delhi"
+    },
+    emergencyContact:[
+        {
+            Name: "Peter",
+            contact: "5123456789"
+        }
+    ]
+}
+db.createUser({
+    user: "Mano",
+    pwd: "password",
+    roles: ["readWrite","dbAdmin"]
+})
+
+db.createCollection("user_records")
+db.user_records.insert({
+    firstName: "Raj",
+    lastName: "Kumar",
+    DOB: new Date("04-10-2001"),
+    skills: ["Java", "J2EE", "Oracle"],
+    Address:
+    {
+        street: "7th Main Road",
+        pincode: "600096",
+        city: "New Delhi"
+    },
+    emergencyContact:[
+        {
+            Name: "Peter",
+            contact: "5123456789"
+        }
+    ]
+
+})
+//create database
+//use <name of database>
+//display current database name
+//db
+//display existing database
+//show dbs
+
+
+
+db.user_records.find().pretty();
+
+db.createCollection("students", {
+    validator: {
+        bsonType: "object",
+        required: ["name", "year", "address"],
+        properties: {
+            name : {
+                bsonType: "string",
+                description: "must be a string and is required"
+            }
+        }
+    }
+})

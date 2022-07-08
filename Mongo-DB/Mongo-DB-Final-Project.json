@@ -1,0 +1,75 @@
+use Final-Project
+db.User.insert({
+    "SavedAddress": [
+    {
+        "type": "Home",
+        "Street Address": "6th Main Road",
+        "locatlity": "Anna Nagar",
+        "Postal Code": 600130,
+        "City": "Chennai",
+        "State": "TamilNadu",
+        "Country": "India"    
+    },
+    {
+        "type": "Office",
+        "Street Address": "8th Main Road",
+        "locality": "Mount Road",
+        "Postal Code": 600045,
+        "City": "Chennai",
+        "State": "TamilNadu",
+        "Country": "India"
+    }],
+    "Default Address":
+        {
+            "type": "Home",
+            "Street Address": "6th Main Road",
+            "locatlity": "Anna Nagar",
+            "Postal Code": 600130,
+            "City": "Chennai",
+            "State": "TamilNadu",
+            "Country": "India"    
+        },
+    "Mobile Number":
+        {
+            "Primary": 9834894939,
+            "Secondary": 9348984949
+
+        },
+    "Email":{
+        "Primary": "abc@gmail.com",
+        "Secondary": "dyz@gmail.com"
+            },
+    "First Name": "Prakash",
+    "Last Name": "Rajagopal",
+    "Rating":["1-Poor", "2-Average","3-Moderate", "4-Good", "5-Excellent"],
+    "Rides Taken":[
+        {
+            "Date": new Date("04/18/2022"),
+            "location": "Marina Mall",
+             "Driver Name": "Murali",
+             "Cost": "500 INR"
+        },
+        {
+            "Date": new Date("02/12/2022"),
+            "location":"INOX Mall",
+            "Driver Name": "Kishore",
+            "Cost": "800 INR"
+        },
+        {
+            "Date": new Date("12/12/2021"),
+            "location":"Besant Nagar Beach",
+            "Driver Name": "Karthick",
+            "Cost": "900 INR"
+        },
+        {
+            "Date": new Date("11/09/2021"),
+            "location":"Besant Nagar Beach",
+            "Driver Name": "Marina Beach",
+            "Cost": "700 INR"
+        }
+    ],
+    "Photograph":"c:/dummy-path/IGNORE.PDF"
+});
+db.User.find({Cost:{$lt:3000}}).sort({Cost:-1}).explain("executionStats");
+db.USer.createIndex({firstName:1, releaseDate: -1});
+db.User.find({Cost:{$lt:3000}}).sort({Cost:-1}).explain("executionStats");

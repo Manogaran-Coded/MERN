@@ -1,0 +1,96 @@
+db.createCollection("Driver");
+db.Driver.insert({
+
+    "SavedAddress": [
+        {
+            "type": "Home",
+            "Street Address": "9th Main Road",
+            "locatlity": "Chrombet",
+            "Postal Code": 60090,
+            "City": "Chennai",
+            "State": "TamilNadu",
+            "Country": "India"    
+        },
+        {
+            "type": "Native",
+            "Street Address": "4th Main Road",
+            "locality": "Madurai",
+            "Postal Code": 600095,
+            "City": "Madurai",
+            "State": "TamilNadu",
+            "Country": "India"
+        }],
+        "Default Address":
+            {
+                "type": "Home",
+                "Street Address": "9th Main Road",
+                "locatlity": "Chrombet",
+                "Postal Code": 60090,
+                "City": "Chennai",
+                "State": "TamilNadu",
+                "Country": "India"   
+            },
+        "Mobile Number":
+            {
+                "Primary": 9840034543,
+                "Secondary": 9500034542
+    
+            },
+        "Email":{
+            "Primary": "driver123@gmail.com",
+            "Secondary": "jkl@gmail.com"
+                },
+        "First Name": "Nelson",
+        "Last Name": "Kumar",
+        "Rating":["1-Not Good", "2-Average","3-Moderate", "4-Good", "5-Excellent"],
+        "Trips":[
+            {
+                "Date": new Date("03/25/2022"),
+                "location": "Mahabalipuram",
+                 "Cost": "3000 INR"
+            },
+            {
+                "Date": new Date("01/18/2022"),
+                "location":"Trhrivanmyur",
+                 "Cost": "800 INR"
+            },
+            {
+                "Date": new Date("06/15/2021"),
+                "location":"Adyar",
+                 "Cost": "900 INR"
+            },
+            {
+                "Date": new Date("11/09/2021"),
+                "location":"Siruseri",
+                 "Cost": "700 INR"
+            }
+        ],
+        "Photograph":"c:/dummy-path/IGNORE.PDF",    
+        "Vehicle Number":[
+            {
+            "Type": "SUV",
+            "Color": "Black",
+            "Vehicle-No": "TN-34323",
+            "Model": "Maruti Suzuki"
+            },
+            {
+                "Type": "Sedan",
+                "Color": "Silver",
+                "Vehicle-No": "TN-23223",
+                "Model": "Swift"
+            },
+            {
+                "Type": "Sedan",
+                "Color": "White",
+                "Vehicle-No": "TN-0081",
+                "Model": "Volkswagen"
+            }
+    ],
+    "Current-Location": "Anna Nagar"
+                        
+    });
+    db.Driver.find({"First Name": "Nelson"});
+
+       
+        db.Driver.createIndex({Type:1});
+       

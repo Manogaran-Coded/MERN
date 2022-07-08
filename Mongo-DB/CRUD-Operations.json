@@ -1,0 +1,41 @@
+use CRUD-Operations
+db.createCollection("Users");
+db.Users.insert({"userId": "1092", "Name": "Simon", "Password": "abcd123"});
+db.Users.find().pretty();
+db.Order_Collection.update({"orderId": "ORD34", "orderStatus": "PLACED"},{ $set : {"orderStatus": "Scheduled"}});
+db.Order_Collection.find({"orderId": "ORD34"});
+db.Order_Collection.find({"manufacturer":"Ferrai" }).pretty();
+
+db.Order_Collection.find({"orderId": "ORD34"}).pretty();
+db.Order_Collection.find().pretty();
+db.Order_Collection.deleteMany({});
+db.Car_List.deleteMany({});
+db.Place_Order.deleteMany({});
+db.Vehicle.deleteMany({});
+"orderId": "ORD34",
+    "orderStatus": "PLACED",
+
+db.Product.find({"Category": "FOOTWEAR"});
+
+db.Product.find({
+    $or: [
+        {
+            Price: "919.0"
+        },
+        {
+            Price: "399.0"
+        }
+    ]
+})
+
+db.Product.find({
+    Price:{
+        $exists: 1
+    }
+    
+})
+
+db.Product.find({"Brand": "Advice"}).pretty();
+
+db.Product.find({"SellerCode": "21066"}).pretty();
+SellerCode

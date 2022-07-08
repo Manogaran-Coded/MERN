@@ -1,0 +1,27 @@
+/*
+Business Requirement
+As an application developer, it’s common to only work with a small amount of data. The amount of data your production system encounters may not be available or may simply be unmanageable on development systems. However, you may experience query latency when the amount of data is eventually increased from few hundred megabytes tofew hundred gigabytes.At this point of time, using optimized indexes in your MongoDB collections addressesperformance problems
+
+Key Issues
+The find query is taking awfully long time to display the results for the PlaceOrder collection.•Your manager hasasked you to find the number of total orders available and the number of orders with the “Delivered” order status
+
+Approach to Solve
+Use Nosqlclient application to create index based on “orderId” of PlaceOrder collection.•Find the count of all the documents in order collection and find the count of documents with orderStatus “Delivered”.
+*/
+
+
+use ('Order-Detail-DB');
+
+db.createCollection("Order_Collection");
+db.Order_Collection.createIndex({Order_id : 1});
+
+db.Order_Collection.insertMany([
+  {'Order_id': 1 , 'Order_No': '23589050','Order_Status': 'Success','create_date': new Date('2014-06-15')},
+  {'Order_id': 2 , 'Order_No': '55958514','Order_Status': 'Pending','create_date': new Date('2014-06-15')},
+  {'Order_id': 3 , 'Order_No': '67883421','Order_Status': 'Delivered','create_date': new Date('2014-06-15')},
+  {'Order_id': 4 , 'Order_No': '98654483','Order_Status': 'Delivered','create_date': new Date('2014-06-15')}
+]);
+
+
+
+db.Order_Collection.find( { "Order_Status" : "Delivered"} ).itcount();
