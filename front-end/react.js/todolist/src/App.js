@@ -38,8 +38,7 @@ function App() {
   <p>{c}={a}*{b}</p>
   <button onClick={() => setCount(count + 1)}> Click me</button>
   <button onClick={()=> setA(a+1)}> Next</button>
-  <h1>Todo List</h1>
-  <TodoList todos={todos} />
+    <TodoList todos={todos} setTodos={setTodos} />
   <AddTodo setTodos={setTodos} />
   </div>
   );

@@ -9,13 +9,14 @@ function AddTodo({setTodos}){
         const text=event.target.elements.addTodo.value;
         console.log("Text" +text);
         const todo={
-            id:4,
+            id:Math.random,
             text: text,
             done: false,
         };
         setTodos((prevTodos) => {
             return prevTodos.concat(todo);
         });
+        inputRef.current.value="";
         
     }
     return(
