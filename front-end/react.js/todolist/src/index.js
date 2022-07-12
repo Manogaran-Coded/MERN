@@ -4,12 +4,21 @@ import './index.css';
 import App from './App';
 import Welcome from './Welcome';
 import reportWebVitals from './reportWebVitals';
+import CounterWithNameAndSideEffect from './CounterWithNameAndSideEffect';
+import SearchFilterDemo from './SearchFilterDemo';
+//import TodoList from './TodoList';
+//import {useState} from "react";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
 root.render(
   <React.StrictMode>
     <App />
     <Welcome user={"Mano"}/>
+    <SearchFilterDemo/>
+    <CounterWithNameAndSideEffect user={"Mano"} />
+ 
   </React.StrictMode>
 );
 
