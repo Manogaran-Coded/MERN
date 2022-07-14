@@ -23,10 +23,10 @@ function App() {
   const [a,setA]=useState(0);
   const b=5;
   const c=a*b;
-  const [todos, setTodos]=React.useState([
+  const [todos, setTodos]=useState([
     {id: 1, text: "Wash dishes", done: false},
-    {id: 1, text: "Do laundry", done: false},
-    {id: 1, text: "Take shower", done: false},
+    {id: 2, text: "Do laundry", done: true},
+    {id: 3, text: "Take shower", done: false},
   ]);
 
 
