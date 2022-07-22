@@ -1,10 +1,11 @@
 import "./App.css";
+//import logo from "./logo.svg";
 function Welcome({user})
 {
     return(
-        <div className="App">
-        <p>Welcome, {user}!</p>
-        </div>
+        
+        <><p>Welcome, {user}!</p></>
+        
     );
 }
 export default Welcome;

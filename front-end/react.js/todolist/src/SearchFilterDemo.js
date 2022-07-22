@@ -2,6 +2,7 @@ import "./App.css";
 import "./SearchFilterDemo";
 import {useState} from "react";
 
+
 function SearchFilterDemo()
 {
 
@@ -23,6 +24,7 @@ function SearchFilterDemo()
 
     return(
         <div className="App SearchFilterDemo">
+        
             <div>
                 Search: <input name="query" type="text" onChange={handleSearch}/>
             </div>

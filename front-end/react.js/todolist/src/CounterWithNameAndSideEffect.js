@@ -7,13 +7,21 @@ function CounterWithNameAndSideEffect ({ user }) {
     useEffect(()=> {
         console.log(`Hi ${user}You clicked ${count} times`);
     }, [user,count]);
-
+/*
     return (
-        <div>
+        <div className="App">
             <p>You clicked ${count} times</p>
             <button onClick={() => setCount(count + 1)}> Click me</button>
         </div>
+    );*/
+
+    return (
+        <>
+            <p>You clicked ${count} times</p>
+            <button onClick={() => setCount(count + 1)}> Click me</button>
+        </>
     );
+
 };
 export default CounterWithNameAndSideEffect;
 
